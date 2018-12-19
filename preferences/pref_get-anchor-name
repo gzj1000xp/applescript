@@ -1,0 +1,3 @@
+tell application "System Preferences"
+	get name of anchor of pane id "com.apple.preference.network"
+end tell

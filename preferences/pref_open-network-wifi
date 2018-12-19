@@ -1,0 +1,4 @@
+tell application "System Preferences"
+	activate
+	reveal anchor "Wi-Fi" of pane id "com.apple.preference.network"
+end tell
