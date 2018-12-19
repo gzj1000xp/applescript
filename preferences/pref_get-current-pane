@@ -1,0 +1,6 @@
+-- Open System Preferences.app and click into desired pane/setting. Then, run this script to find out name (Pane ID).
+
+tell application "System Preferences"
+	set CurrentPane to the id of the current pane
+	get CurrentPane
+end tell
