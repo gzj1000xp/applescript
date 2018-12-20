@@ -1,0 +1,24 @@
+tell application "System Preferences"
+	activate
+	reveal pane id "com.apple.preferences.Bluetooth"
+end tell
+delay 30
+tell application "System Events"
+	tell process "System Preferences"
+		tell window 1
+			tell scroll area 1
+				tell table 1
+					set rowcount to (count of rows)
+					get rowcount
+					set namelist to {}
+					set x to 1
+					repeat rowcount times
+						set the end of namelist to name of static text of UI element 1 of row x
+						set x to (x + 1)
+					end repeat
+					get namelist
+				end tell
+			end tell
+		end tell
+	end tell
+end tell

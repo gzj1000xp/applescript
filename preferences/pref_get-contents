@@ -1,0 +1,9 @@
+tell application "System Preferences"
+	activate
+	reveal pane id "com.apple.preferences.Bluetooth"
+end tell
+tell application "System Events"
+	tell process "System Preferences"
+		entire contents
+	end tell
+end tell

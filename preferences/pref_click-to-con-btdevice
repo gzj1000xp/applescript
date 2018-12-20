@@ -1,0 +1,20 @@
+tell application "System Preferences"
+	activate
+	reveal pane id "com.apple.preferences.Bluetooth"
+end tell
+delay 0.5
+tell application "System Events"
+	tell process "System Preferences"
+		tell window 1
+			tell scroll area 1
+				tell table 1
+					#brew install cliclick
+					#需要首先cliclick p确定需点击按钮的坐标
+					do shell script "/usr/local/bin/cliclick -r kd:ctrl c:382,219 ku:ctrl"
+					delay 0.5
+					do shell script "/usr/local/bin/cliclick -r c:400,230"
+				end tell
+			end tell
+		end tell
+	end tell
+end tell
