@@ -7,7 +7,7 @@ tell application "System Events"
 				click menu item "客厅的小米电视" of menu 1
 				return "正在尝试隔空播放至小米电视..."
 			else
-				click apMenu -- Close main BT drop down if Connect wasn't present
+				click apMenu
 				return "未找到隔空播放设备"
 			end if
 		end tell

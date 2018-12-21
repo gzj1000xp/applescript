@@ -7,7 +7,7 @@ tell application "System Events"
 				click menu item "关闭隔空播放" of menu 1
 				return "正在关闭隔空播放..."
 			else
-				click apMenu -- Close main BT drop down if Connect wasn't present
+				click apMenu
 				return "暂时无法关闭隔空播放"
 			end if
 		end tell
